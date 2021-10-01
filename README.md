@@ -17,4 +17,4 @@ In order to meet the Acceptance Criteria of the project:
 
 ## Link
 
-[Weather Dashboard](https://github.com/abrahamin/6-Weather-Dashboard)
+[Weather Dashboard](https://abrahamin.github.io/6-Weather-Dashboard/)
