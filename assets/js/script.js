@@ -61,13 +61,13 @@ function printResults(dataResults) {
     console.log(dataResults);
 
     var infoOne = document.getElementById('city-temp');
-    infoOne.textContent = 'Temp: ' + dataResults.current.temp + '°F';
+    infoOne.textContent = 'Temp: ' + dataResults.current.temp + ' °F';
 
     var infoTwo = document.getElementById('city-wind');
-    infoTwo.textContent = 'Wind: ' + dataResults.current.wind_speed + 'MPH';
+    infoTwo.textContent = 'Wind: ' + dataResults.current.wind_speed + ' MPH';
 
     var infoThree = document.getElementById('city-humid');
-    infoThree.textContent = 'Humidity: ' + dataResults.current.humidity + '%';
+    infoThree.textContent = 'Humidity: ' + dataResults.current.humidity + ' %';
 
     var infoFour = document.getElementById('city-uv');
     infoFour.textContent = 'UV Index: ';
@@ -83,6 +83,11 @@ function printResults(dataResults) {
         infoFive.style.backgroundColor = '#FFA500';
     };
 
+    var cityImage = document.getElementById('city-image');
+    var iconCode = dataResults.current.weather[0].icon;
+    var iconURL = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+    cityImage.setAttribute("src", iconURL);
+
     fiveDayTitleEl.textContent = "5-Day Forecast:"
 
     for (var i = 1; i < 6; i++) {
@@ -90,14 +95,39 @@ function printResults(dataResults) {
         cardDate.textContent = moment().day([i+4]).format("M/D/YYYY");
 
         var cardTemp = document.getElementById("cardTemp"+[i]);
-        cardTemp.textContent = 'Temp: ' + dataResults.daily[i].temp.day + '°F';
+        cardTemp.textContent = 'Temp: ' + dataResults.daily[i].temp.day + ' °F';
 
         var cardWind = document.getElementById("cardWind"+[i]);
-        cardWind.textContent = 'Wind: ' + dataResults.daily[i].wind_speed + 'MPH';
+        cardWind.textContent = 'Wind: ' + dataResults.daily[i].wind_speed + ' MPH';
 
         var cardHumid = document.getElementById("cardHumid"+[i]);
-        cardHumid.textContent = 'Humidity: ' + dataResults.daily[i].humidity + '%';
+        cardHumid.textContent = 'Humidity: ' + dataResults.daily[i].humidity + ' %';
     }
+
+    var cardImage1 = document.getElementById("cardImage1");
+    var iconCode1 = dataResults.daily[1].weather[0].icon;
+    var iconURL1 = "http://openweathermap.org/img/wn/" + iconCode1 + "@2x.png";
+    cardImage1.setAttribute("src", iconURL1);
+
+    var cardImage2 = document.getElementById("cardImage2");
+    var iconCode2 = dataResults.daily[2].weather[0].icon;
+    var iconURL2 = "http://openweathermap.org/img/wn/" + iconCode2 + "@2x.png";
+    cardImage2.setAttribute("src", iconURL2);
+
+    var cardImage3 = document.getElementById("cardImage3");
+    var iconCode3 = dataResults.daily[3].weather[0].icon;
+    var iconURL3 = "http://openweathermap.org/img/wn/" + iconCode3 + "@2x.png";
+    cardImage3.setAttribute("src", iconURL3);
+
+    var cardImage4 = document.getElementById("cardImage4");
+    var iconCode4 = dataResults.daily[4].weather[0].icon;
+    var iconURL4 = "http://openweathermap.org/img/wn/" + iconCode4 + "@2x.png";
+    cardImage4.setAttribute("src", iconURL4);
+
+    var cardImage5 = document.getElementById("cardImage5");
+    var iconCode5 = dataResults.daily[5].weather[0].icon;
+    var iconURL5 = "http://openweathermap.org/img/wn/" + iconCode5 + "@2x.png";
+    cardImage5.setAttribute("src", iconURL5);
 }
 
 searchFormEl.addEventListener('submit', searchCity);

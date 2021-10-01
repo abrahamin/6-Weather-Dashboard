@@ -5,26 +5,62 @@ body {
 header {
     text-align: center;
     padding: 1rem 0rem;
-    background-color: blue;
+    background-color: rgb(70, 70, 175);
     color: white;
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 350%;
     font-weight: bolder;
-}
-
-nav {
-    height: 100vh;
 }
 
 #weather-content {
     margin: 1%;
     border: 1px solid black;
+    font-size: 150%;
+}
+
+#city-title {
+    font-size: 165%;
+    font-weight: bolder;
+}
+
+#city-title, #city-image {
+    display: inline;
+}
+
+#city-image {
+    height: 20%;
 }
 
 #city-uv, #uv-index {
     display: inline;
 }
 
-#
+h4 {
+    font-size: 165%;
+    font-weight: bolder;
+}
+
+#five-day {
+    padding-left: 1%;
+}
+
+.card {
+    background-color: rgb(70, 70, 175);
+    color: white;
+}
+
+h5 {
+    font-size: 150%;
+    font-weight: bolder;
+}
+
+.card img {
+    width: 35%;
+    height: auto;
+}
+
+.card p {
+    font-size: 115%;
+}
