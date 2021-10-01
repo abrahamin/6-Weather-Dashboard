@@ -7,6 +7,7 @@ var weatherContentEl = document.querySelector('#weather-content');
 var fiveDayEl = document.querySelector('#five-day');
 var fiveDayTitleEl = document.querySelector('#five-title');
 
+// runs the api function based on the city input of user
 function searchCity(event) {
     event.preventDefault();
 
@@ -15,6 +16,7 @@ function searchCity(event) {
     apiOne(searchInput);
 };
 
+// runs CurrentWeather api to get primary data
 function apiOne(searchInput) {
     var currentWeatherApi = "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&appid=" + APIKey;
 
@@ -32,6 +34,7 @@ function apiOne(searchInput) {
             console.error(error);
         })
 
+    // uses data from first api to run OneCall api for secondary data
     function apiTwo(coordinates) {
         console.log(coordinates);
         var cityTitle = document.querySelector('#city-title');
@@ -59,6 +62,7 @@ function apiOne(searchInput) {
     }
 };
 
+// prints data for current weather on the webpage
 function printResults(dataResults) {
     console.log(dataResults);
 
@@ -77,6 +81,7 @@ function printResults(dataResults) {
     var infoFive = document.getElementById('uv-index');
     infoFive.textContent = dataResults.current.uvi
 
+    // changes color of UV index
     if (dataResults.current.uvi < 3) {
         infoFive.style.backgroundColor = '#00FF00';
     } else if (dataResults.current.uvi < 6) {
@@ -85,6 +90,7 @@ function printResults(dataResults) {
         infoFive.style.backgroundColor = '#FFA500';
     };
 
+    // displays icon of current weather
     var cityImage = document.getElementById('city-image');
     var iconCode = dataResults.current.weather[0].icon;
     var iconURL = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
@@ -92,9 +98,10 @@ function printResults(dataResults) {
 
     fiveDayTitleEl.textContent = "5-Day Forecast:"
 
+    // for loop used to print data for the five day forecast
     for (var i = 1; i < 6; i++) {
         var cardDate = document.getElementById("cardDate"+[i]);
-        cardDate.textContent = moment().day([i+4]).format("M/D/YYYY");
+        cardDate.textContent = moment().day([i+5]).format("M/D/YYYY");
 
         var cardTemp = document.getElementById("cardTemp"+[i]);
         cardTemp.textContent = 'Temp: ' + dataResults.daily[i].temp.day + ' °F';
@@ -106,6 +113,7 @@ function printResults(dataResults) {
         cardHumid.textContent = 'Humidity: ' + dataResults.daily[i].humidity + ' %';
     }
 
+    // displays icon of upcoming weather for each respective day of the forecast
     var cardImage1 = document.getElementById("cardImage1");
     var iconCode1 = dataResults.daily[1].weather[0].icon;
     var iconURL1 = "http://openweathermap.org/img/wn/" + iconCode1 + "@2x.png";
@@ -136,6 +144,7 @@ searchFormEl.addEventListener('submit', searchCity);
 
 var cities = [];
 
+// functions used to store input of form as an array into local storage and display buttons for each city input
 function renderCities() {
     pastSearches.innerHTML = "";
 
@@ -174,6 +183,7 @@ searchFormEl.addEventListener("submit", function(event) {
         return;
     }
 
+    // prevents multiple instances of the same city in local storage
     if (cities.includes(cityText) === false) {
         cities.push(cityText);
     } else {
@@ -189,6 +199,7 @@ searchFormEl.addEventListener("submit", function(event) {
 
 init();
 
+// function to run the primary function once city button from local storage is clicked
 pastSearches.addEventListener("click", function(event) {
     var element = event.target;
 
