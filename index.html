@@ -19,8 +19,10 @@
             <nav class="col-md-3">
                 <h2>Search for a City:</h2>
                 <form id="search-form">
-                    <input id="city-input" class="col-12" type="text" placeholder="Enter City Here">
-                    <button id="button" class="col-12">Search</button>
+                    <input id="city-input" class="col-12 form-control-lg" type="text" placeholder="Enter City Here">
+                    <button id="button" class="col-12 btn-lg btn-primary">Search</button>
+                    <hr/>
+                    <div id="past-search"></div>
                 </form>
             </nav>
 
@@ -32,7 +34,7 @@
                     <p id="city-wind"></p>
                     <p id="city-humid"></p>
                     <p id="city-uv"></p>
-                    <div id="uv-index"></div>
+                    <div id="uv-index" class="badge"></div>
                 </main>
 
                 <aside id="weather-forecast" class="col-md-12">

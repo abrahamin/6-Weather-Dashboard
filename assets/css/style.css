@@ -5,12 +5,17 @@ body {
 header {
     text-align: center;
     padding: 1rem 0rem;
-    background-color: rgb(70, 70, 175);
+    background-color: rgb(65, 65, 165);
     color: white;
 }
 
 h1 {
-    font-size: 350%;
+    font-size: 400%;
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 250%;
     font-weight: bolder;
 }
 
@@ -21,7 +26,7 @@ h1 {
 }
 
 #city-title {
-    font-size: 165%;
+    font-size: 180%;
     font-weight: bolder;
 }
 
@@ -30,24 +35,29 @@ h1 {
 }
 
 #city-image {
-    height: 20%;
+    height: 25%;
 }
 
 #city-uv, #uv-index {
     display: inline;
 }
 
+#uv-index {
+    font-size: 100%;
+}
+
 h4 {
-    font-size: 165%;
+    font-size: 180%;
     font-weight: bolder;
+    margin-left: 1%;
 }
 
 #five-day {
-    padding-left: 1%;
+    margin-left: 1%;
 }
 
 .card {
-    background-color: rgb(70, 70, 175);
+    background-color: rgb(55, 75, 100);
     color: white;
 }
 
@@ -62,5 +72,9 @@ h5 {
 }
 
 .card p {
-    font-size: 115%;
+    font-size: 125%;
+}
+
+button {
+    margin-top: 2%;
 }
