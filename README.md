@@ -2,7 +2,7 @@
 
 ## Description
 
-The purpose of this project was to access data from a third-party API by making requests with specific parameters of a URL. This data was used in the context of displaying the current and future weather of a select city. The weather dashboard was made to run in the browser using dynamically updated HTML and CSS. Bootstrap and Moment.js were used for styling and time display purposes, respectively. Previously searched cities are saved using localStorage.
+The purpose of this project was to access data from a third-party API by making requests with specific parameters of a URL. This data was used in the context of displaying the current and future weather of a select city. The weather dashboard was made to run in the browser using dynamically updated HTML and CSS. Bootstrap and Moment.js were used for styling and time display purposes, respectively. Previously searched cities are saved using `localStorage`.
 
 In order to meet the Acceptance Criteria of the project:
 * searching for a city presents the current and future conditions of the city and the city is added to the search history
@@ -13,7 +13,7 @@ In order to meet the Acceptance Criteria of the project:
 
 ## Screenshot
 
-![Weather Dashboard](/assets/images/dashboard.jpg)
+![Weather Dashboard](/assets/images/dashboard.png)
 
 ## Link
 
