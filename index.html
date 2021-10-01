@@ -16,24 +16,74 @@
 
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-12 col-md-3">
+            <nav class="col-md-3">
                 <h2>Search for a City:</h2>
                 <form id="search-form">
                     <input id="city-input" class="col-12" type="text" placeholder="Enter City Here">
                     <button id="button" class="col-12">Search</button>
                 </form>
             </nav>
+            
+            <div id="city-information" class="row col-md-9">
+                <main id="weather-content" class="col-md-12">
+                    <h3 id="city-title"></h3>
+                    <p id="city-temp"></p>
+                    <p id="city-wind"></p>
+                    <p id="city-humid"></p>
+                    <div>
+                        <p id="city-uv"></p>
+                        <div id="uv-index"></div>
+                    </div>
+                </main>
     
-            <main id="weather-content" class="col-12 col-md-9">
-                <h3 id="city-title"></h3>
-            </main>
-
-            <aside id="five-day">
-                <h4 id="five-title"></h4>
-            </aside>
+                <aside class="col-md-12">
+                    <h4 id="five-title"></h4>
+                    <div id="five-day" class="row">
+                        <div class="col-md-2 p-3 mr-2 card-color">
+                            <p id="cardDate1"></p>
+                            <p id="cardImage1"></p>
+                            <p id="cardTemp1"></p>
+                            <p id="cardWind1"></p>
+                            <p id="cardHumid1"></p>
+                        </div>
+                        <div class="col-md-2 p-3 mr-2 card-color">
+                            <p id="cardDate2"></p>
+                            <p id="cardImage2"></p>
+                            <p id="cardTemp2"></p>
+                            <p id="cardWind2"></p>
+                            <p id="cardHumid2"></p>
+                        </div>
+                        <div class="col-md-2 p-3 mr-2 card-color">
+                            <p id="cardDate3"></p>
+                            <p id="cardImage3"></p>
+                            <p id="cardTemp3"></p>
+                            <p id="cardWind3"></p>
+                            <p id="cardHumid3"></p>
+                        </div>
+                        <div class="col-md-2 p-3 mr-2 card-color">
+                            <p id="cardDate4"></p>
+                            <p id="cardImage4"></p>
+                            <p id="cardTemp4"></p>
+                            <p id="cardWind4"></p>
+                            <p id="cardHumid4"></p>
+                        </div>
+                        <div class="col-md-2 p-3 mr-2 card-color">
+                            <p id="cardDate5"></p>
+                            <p id="cardImage5"></p>
+                            <p id="cardTemp5"></p>
+                            <p id="cardWind5"></p>
+                            <p id="cardHumid5"></p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
         </div>
     </div>
 
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+    ></script>
     <script src="assets/js/script.js"></script>
 </body>
 

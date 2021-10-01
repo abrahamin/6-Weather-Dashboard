@@ -14,7 +14,17 @@ h1 {
     font-weight: bolder;
 }
 
-#uv-index {
-    text-align: center;
-    min-width: 140%;
+nav {
+    height: 100vh;
 }
+
+#weather-content {
+    margin: 1%;
+    border: 1px solid black;
+}
+
+#city-uv, #uv-index {
+    display: inline;
+}
+
+#
